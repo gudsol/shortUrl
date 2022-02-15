@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken')
 const UserController = {
     register:async(req,res)=>{
         try {
-            console.log("0")
+            //console.log("0")
             const {username,email,password}=req.body
 
             const user =await Users.findOne({email})
@@ -33,7 +33,7 @@ const UserController = {
             })
             // console.log("3")
             await userData.save()
-
+                res.status(200).json("reg success")
             // res.redirect(`http://localhost:8000/login`)
 
         } catch (error) {
@@ -66,7 +66,6 @@ const UserController = {
                 const{_id,username,email}=user
                 //  res.redirect(`http://localhost:8000/short`)
                 res.status(200).json("successs")
-
                 console.log({accessToken, savedUser:{_id,username,email}})
                 
             }

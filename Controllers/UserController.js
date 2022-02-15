@@ -14,7 +14,7 @@ const UserController = {
             const user =await Users.findOne({email})
             if(user) return res.status(400).json({msg:"email already exists"})
 
-            console.log("1")
+            // console.log("1")
 
             if(password.length <6) return res.status(400).json({msg:"password must be 6 char"})
 
@@ -23,7 +23,7 @@ const UserController = {
 
                
             }
-            console.log("2")
+            // console.log("2")
             const hashpassword = await bcrypt.hash(password,10)
 
             const userData = new Users({
@@ -31,10 +31,10 @@ const UserController = {
                 email,
                 password:hashpassword
             })
-            console.log("3")
+            // console.log("3")
             await userData.save()
 
-            return res.redirect(`http://localhost:8000/login`)
+            // res.redirect(`http://localhost:8000/login`)
 
         } catch (error) {
             return res.status(400).json({error:"register failed"})
@@ -64,7 +64,8 @@ const UserController = {
                 const accessToken = createAccessToken({_id: user._id})
 
                 const{_id,username,email}=user
-                res.redirect(`http://localhost:8000/short`)
+                //  res.redirect(`http://localhost:8000/short`)
+                res.status(200).json("successs")
 
                 console.log({accessToken, savedUser:{_id,username,email}})
                 

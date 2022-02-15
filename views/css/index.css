@@ -1,0 +1,125 @@
+.login_overall_contain{
+     border: 1px solid rgba(233, 233, 233, 0.11); 
+    height: 65vh;
+    width: 55%;
+    border-radius: 15px;
+    margin: 8% auto;
+    display: flex;
+    box-shadow:  #12c2e96e  10px 12px 35px -5px;
+}
+.login_left_contain{
+    /* border: 1px solid red; */
+    width: 65%;
+    height: 100%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.login_right_contain{
+    /* border: 1px solid green; */
+    width: 35%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #232249;
+}
+.login_right_text{
+    color: white;
+    /* font-family:Arial, Helvetica, sans-serif; */
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 60%;
+    font-family:cursive;
+}
+.login_right_inner_contain{
+    /* border: 1px solid white; */
+    height: 30%;
+    width: 80%;
+    margin: 5% auto;
+}
+.login_right_inner_contain_text{
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    font-family:cursive;
+    margin-top: 0%;
+}
+.login_left_text1{
+    color:#000000;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 5%;
+}
+.login_left_text2{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: cursive;
+    text-align: center;
+    margin-top: -3%;
+}
+.login_left_inner_contain1{
+     border: 1px solid transparent;
+    width: 80%;
+    height: 40%;
+    margin: 6% auto;
+}
+.login_left_inner_contain_email,.login_left_inner_contain_password{
+    border: 2px solid rgba(233, 233, 233, 0.267);
+    height: 25%;
+    width: 95%;
+    margin: 6% auto;
+    display: flex;
+    border-radius: 25px;
+    box-shadow:  #12c2e942  10px 15px 10px -8px;
+    
+}
+.fa-envelope-open,.fa-lock{
+    font-size: 20px;
+    margin: 3% 0 0 4%;
+  color: #232249;
+}
+.email_input_field,.password_input_field{
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 70%;
+    margin: 2% 0 0 3%;
+    font-family: cursive;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+input::placeholder{
+    font-family: cursive;
+    font-size: 13px;
+    font-weight: 500;
+    color: #2424;
+}
+.login_btn{
+     border: none;
+    width: 210px;
+    height: 43px;
+    margin: 5% 0 0 30%;
+    border-radius: 25px;
+    background-color: #232249;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.login_left_text3{
+    /* border: 1px solid red; */
+    margin: 15% 0 0 57%;
+    font-family: cursive;
+    font-size: 12px;
+    font-weight: 550;
+}
+.login_left_text4{
+    text-decoration: none;
+    color: rgb(0, 174, 255);
+}

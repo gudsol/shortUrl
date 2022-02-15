@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='/css/short.css'>
+    <script src="https://kit.fontawesome.com/add73f3a8e.js" crossorigin="anonymous"></script>
+    <title>Short Your Url</title>
+</head>
+<body>
+    <div class="overall">
+       
+
+        <div class="url_shorter_input">
+            <h1 class="url_shorter_heading1">URL SHORTER</h1><br>
+            <p class="url_shorter_heading2">Make your URL shorter , easier & faster.....</p>
+            <form action="/add" method="post">
+                <div  class="url_short_overall_input">
+                <div class="url_short_input">
+                    <i class="fas fa-link"></i>
+                    <input type="url" placeholder="Paste your url here....." name="full" id="full" class="input" >
+                </div>
+                <button class="url_shorter_btn" type="submit">Short</button>
+            </div>
+            </form>
+            <div class="img1">
+                <img src="./img/1.png" alt="">
+            </div>
+            <div class="img2">
+                <img src="./img/3.png" alt="">
+            </div>
+        </div>
+        
+
+        <div class="url_shorter_table_contain">
+
+            <table class="url_shorter_table">
+                <thead>
+                    <tr class="url_shorter_table_head_tr">
+                        <th>Full URL</th>
+                        <th>Short URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%shortUrls.forEach(shorturl=>{%>
+                        
+                
+                    <tr class="url_shorter_table_body_tr">
+                        <td> <a href="<%=shorturl.full %>"><%=shorturl.full%></a> </td>
+                        <td><a href="<%=shorturl.short%>">localhost:8000/<%=shorturl.short %></a></td>
+                    </tr>
+               <%})%>
+                    
+                </tbody>
+            </table>
+
+        </div>
+        
+
+    </div>
+</body>
+</html>

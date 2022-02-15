@@ -21,24 +21,24 @@ app.use(express.static('views'))
   
 // })
 
-app.get("/",(req,res)=>{
-  res.render("index")
-})
+// app.get("/",(req,res)=>{
+//   res.render("index")
+// })
 
-app.get("/register",(req,res)=>{
-  res.render("register")
-})
+// app.get("/register",(req,res)=>{
+//   res.render("register")
+// })
 
-app.get('/short', async (req, res) => {
-    const shortUrls = await ShortUrl.find()
-    res.render('short',{ shortUrls: shortUrls })
-  })
+// app.get('/short', async (req, res) => {
+//     const shortUrls = await ShortUrl.find()
+//     res.render('short',{ shortUrls: shortUrls })
+//   })
 
-  app.get('/:shortUrl', async (req, res) => {
-    const shortUrl = await ShortUrl.findOne({ short: req.params.shortUrl })
-    if (shortUrl == null) return res.sendStatus(404)
-    res.redirect(shortUrl.full)
-  })
+//   app.get('/:shortUrl', async (req, res) => {
+//     const shortUrl = await ShortUrl.findOne({ short: req.params.shortUrl })
+//     if (shortUrl == null) return res.sendStatus(404)
+//     res.redirect(shortUrl.full)
+//   })
 
 const port =process.env.port || 8000;
 
